@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Trading</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5em;
+            color: #f0c14b;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        section {
+            text-align: center;
+            color: white;
+            background: url('https://c0.wallpaperflare.com/preview/222/411/586/chart-trading-courses-forex.jpg') no-repeat center center/cover;
+            padding: 70px 20px;
+            height: 90vh;
+            background-position: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .home-block {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            padding: 20px;
+        }
+        .block-item {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .block-item:hover {
+            transform: scale(1.05);
+        }
+        .block-item img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        .service-box {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+        .service-box:hover {
+            transform: scale(1.05);
+        }
+        .service-box h3 {
+            color: #f0c14b;
+            margin-bottom: 15px;
+        }
+        .button {
+            background-color: #f0c14b;
+            color: #333;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #e1b10d;
+        }
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .terms {
+            display: none;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            color: #ddd;
+            margin-top: 10px;
+            line-height: 1.5;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .whatsapp-link {
+            color: #25d366;
+        }
+        .about-image {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 12px;
+        }
+    </style>
+    <script>
+        // Toggle function for displaying Terms & Conditions
+        function toggleTerms(event) {
+            const termsSection = event.target.nextElementSibling;
+            if (termsSection.style.display === 'none' || termsSection.style.display === '') {
+                termsSection.style.display = 'block'; // Show Terms & Conditions
+            } else {
+                termsSection.style.display = 'none'; // Hide Terms & Conditions
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to ViQuant Trading</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home">
+        <div class="content">
+            <h2>Your Gateway to the Stock Market</h2>
+            <p>Discover opportunities to grow your wealth with our expert guidance. Start your journey with us today.</p>
+            <a href="#services" class="button">Explore Our Plans</a>
+        </div>
+
+        <!-- Market Segments -->
+        <div class="home-block">
+            <div class="block-item">
+                <img src="https://www.bseindia.com/include/images/bselogo.png" alt="BSE">
+                <h3>BSE</h3>
+                <p>The Bombay Stock Exchange offers a reliable market with diverse sectors to invest in.</p>
+            </div>
+            <div class="block-item">
+                <img src="https://www.nseindia.com/assets/images/NSE_Logo.svg" alt="NSE">
+                <h3>NSE</h3>
+                <p>The National Stock Exchange provides opportunities for stock trading, derivatives, and more.</p>
+            </div>
+            <div class="block-item">
+                <img src="https://www.nseindia.com/assets/images/logo_nifty50.png" alt="F&O">
+                <h3>F&O</h3>
+                <p>Futures and Options help you hedge and speculate in dynamic market conditions.</p>
+            </div>
+            <div class="block-item">
+                <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="Bitcoin">
+                <h3>Bitcoin</h3>
+                <p>Bitcoin is a global decentralized cryptocurrency revolutionizing the finance world.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>At ViQuant, we are dedicated to helping you navigate the stock market. With our expert strategies and market insights, we provide you with the tools you need to succeed.</p>
+            <img class="about-image" src="https://as2.ftcdn.net/v2/jpg/11/17/62/17/1000_F_1117621753_KUvcFQcZKNuRI94JDUeUkQrGyaM03qdd.jpg" alt="About Us Image">
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="content">
+            <h2>Our Plans</h2>
+            <div class="services-container">
+                <div class="service-box">
+                    <h3>Monthly Plan</h3>
+                    <p>Earn a 4% return every month. A solid choice for steady growth.</p>
+                    <div class="terms">
+                        <strong>Terms & Conditions:</strong>
+                        <ul>
+                            <li>Minimum investment: 20k</li>
+                            <li>Fixed monthly returns</li>
+                        </ul>
+                    </div>
+                    <p><a href="javascript:void(0);" onclick="toggleTerms(event)">T&C</a></p>
+                </div>
+                <div class="service-box">
+                    <h3>Daily Plan</h3>
+                    <p>Share in 50% of the profits daily. Ideal for those looking for active engagement.</p>
+                    <div class="terms">
+                        <strong>Terms & Conditions:</strong>
+                        <ul>
+                            <li>Provide trading ID</li>
+                            <li>Follow stop-loss and target guidelines</li>
+                        </ul>
+                    </div>
+                    <p><a href="javascript:void(0);" onclick="toggleTerms(event)">T&C</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Have any questions? Reach out to us!</p>
+            <p><strong>Phone:</strong> +91 9112295322</p>
+            <p><strong>WhatsApp:</strong> <a href="https://chat.whatsapp.com/DmMrBSOeKoRH49yOcE0qJv" target="_blank" class="whatsapp-link">Join our WhatsApp Group</a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/viqaunttrader" target="_blank" class="whatsapp-link">Instagram Page</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ViQuant Trading. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
